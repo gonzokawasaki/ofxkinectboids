@@ -229,7 +229,7 @@
 		77EBF17A14BEF08600D2C8EC /* ofxOpenNITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNITypes.h; sourceTree = "<group>"; };
 		9F174BB61732C37800940238 /* BiologicalVehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BiologicalVehicle.cpp; sourceTree = "<group>"; };
 		9F174BB71732C37800940238 /* BiologicalVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiologicalVehicle.h; sourceTree = "<group>"; };
-		9F174BB81732C37800940238 /* ofxBoids.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBoids.h; sourceTree = "<group>"; };
+		9F174BB81732C37800940238 /* ofxBoids.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxBoids.h; path = ../boidsclasses/ofxBoids.h; sourceTree = "<group>"; };
 		9F174BB91732C37800940238 /* SteeredVehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeredVehicle.cpp; sourceTree = "<group>"; };
 		9F174BBA1732C37800940238 /* SteeredVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeredVehicle.h; sourceTree = "<group>"; };
 		9F174BBB1732C37800940238 /* Vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vehicle.cpp; sourceTree = "<group>"; };
@@ -542,7 +542,6 @@
 			children = (
 				9F174BB61732C37800940238 /* BiologicalVehicle.cpp */,
 				9F174BB71732C37800940238 /* BiologicalVehicle.h */,
-				9F174BB81732C37800940238 /* ofxBoids.h */,
 				9F174BB91732C37800940238 /* SteeredVehicle.cpp */,
 				9F174BBA1732C37800940238 /* SteeredVehicle.h */,
 				9F174BBB1732C37800940238 /* Vehicle.cpp */,
@@ -620,6 +619,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				9F174BB81732C37800940238 /* ofxBoids.h */,
 				7704EC2514C7066A001AF021 /* main.cpp */,
 				7704EC2114C70657001AF021 /* testApp.cpp */,
 				7704EC2214C70657001AF021 /* testApp.h */,
