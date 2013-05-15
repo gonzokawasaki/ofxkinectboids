@@ -65,7 +65,7 @@ void testApp::draw(){
     
     for (int deviceID = 0; deviceID < numDevices; deviceID++){
         ofTranslate(0, deviceID * 480);
-       // openNIDevices[deviceID].drawDebug(); // debug draw does the equicalent of the commented methods below
+        openNIDevices[deviceID].drawDebug(); // debug draw does the equicalent of the commented methods below
 //        openNIDevices[deviceID].drawDepth(0, 0, 640, 480);
 //        openNIDevices[deviceID].drawImage(640, 0, 640, 480);
 //        openNIDevices[deviceID].drawSkeletons(640, 0, 640, 480);

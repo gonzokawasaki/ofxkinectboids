@@ -26,9 +26,9 @@ void testApp::draw(){
 
 	ofSetColor(255, 255, 255);
 
-    //openNIDevice.drawDebug(); // draws all generators
-    openNIDevice.drawDepth(0, 0);
-    openNIDevice.drawImage(640, 0);
+    openNIDevice.drawDebug(); // draws all generators
+    //openNIDevice.drawDepth(0, 0);
+    //openNIDevice.drawImage(640, 0);
 
     ofSetColor(0, 255, 0);
 	string msg = " MILLIS: " + ofToString(ofGetElapsedTimeMillis()) + " FPS: " + ofToString(ofGetFrameRate());

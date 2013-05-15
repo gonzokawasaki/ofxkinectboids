@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7704EC2414C70657001AF021 /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7704EC2114C70657001AF021 /* testApp.cpp */; };
+		7704EC2614C7066A001AF021 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7704EC2514C7066A001AF021 /* main.cpp */; };
 		770F032514B9969E003CCE99 /* libnimCodecs.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 770F031714B9969E003CCE99 /* libnimCodecs.dylib */; };
 		770F032614B9969E003CCE99 /* libnimMockNodes.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 770F031814B9969E003CCE99 /* libnimMockNodes.dylib */; };
 		770F032714B9969E003CCE99 /* libnimRecorder.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 770F031914B9969E003CCE99 /* libnimRecorder.dylib */; };
@@ -24,10 +26,9 @@
 		9F174BBD1732C37800940238 /* BiologicalVehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F174BB61732C37800940238 /* BiologicalVehicle.cpp */; };
 		9F174BBE1732C37800940238 /* SteeredVehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F174BB91732C37800940238 /* SteeredVehicle.cpp */; };
 		9F174BBF1732C37800940238 /* Vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F174BBB1732C37800940238 /* Vehicle.cpp */; };
-		9F371B94173C4579006FBD73 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F371B91173C4579006FBD73 /* main.cpp */; };
-		9F371B95173C4579006FBD73 /* testApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F371B92173C4579006FBD73 /* testApp.cpp */; };
-		9F371B9B173C45A8006FBD73 /* ofxOpenNITypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F371B98173C45A8006FBD73 /* ofxOpenNITypes.cpp */; };
-		9F371B9C173C45A8006FBD73 /* ofxOpenNI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F371B9A173C45A8006FBD73 /* ofxOpenNI.cpp */; };
+		9F4DA3D4173C3EC600D85E31 /* ofxOpenNITypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DA3D1173C3EC600D85E31 /* ofxOpenNITypes.cpp */; };
+		9F4DA3D5173C3EC600D85E31 /* ofxOpenNI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DA3D3173C3EC600D85E31 /* ofxOpenNI.cpp */; };
+		9FC8872A1743B4ED00292047 /* alexkinect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FC887291743B4ED00292047 /* alexkinect.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
@@ -76,6 +77,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7704EC2114C70657001AF021 /* testApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
+		7704EC2214C70657001AF021 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
+		7704EC2514C7066A001AF021 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		770F031614B9969E003CCE99 /* change_exec_paths.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = change_exec_paths.sh; sourceTree = "<group>"; };
 		770F031714B9969E003CCE99 /* libnimCodecs.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnimCodecs.dylib; sourceTree = "<group>"; };
 		770F031814B9969E003CCE99 /* libnimMockNodes.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libnimMockNodes.dylib; sourceTree = "<group>"; };
@@ -221,18 +225,18 @@
 		770F03BC14B996AE003CCE99 /* XnVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XnVersion.h; sourceTree = "<group>"; };
 		9F174BB61732C37800940238 /* BiologicalVehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BiologicalVehicle.cpp; sourceTree = "<group>"; };
 		9F174BB71732C37800940238 /* BiologicalVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BiologicalVehicle.h; sourceTree = "<group>"; };
+		9F174BB81732C37800940238 /* ofxBoids.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxBoids.h; path = ../boidsclasses/ofxBoids.h; sourceTree = "<group>"; };
 		9F174BB91732C37800940238 /* SteeredVehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SteeredVehicle.cpp; sourceTree = "<group>"; };
 		9F174BBA1732C37800940238 /* SteeredVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteeredVehicle.h; sourceTree = "<group>"; };
 		9F174BBB1732C37800940238 /* Vehicle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vehicle.cpp; sourceTree = "<group>"; };
 		9F174BBC1732C37800940238 /* Vehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vehicle.h; sourceTree = "<group>"; };
-		9F371B91173C4579006FBD73 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		9F371B92173C4579006FBD73 /* testApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = testApp.cpp; sourceTree = "<group>"; };
-		9F371B93173C4579006FBD73 /* testApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testApp.h; sourceTree = "<group>"; };
-		9F371B96173C45A8006FBD73 /* ofxOpenNIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNIUtils.h; sourceTree = "<group>"; };
-		9F371B97173C45A8006FBD73 /* ofxOpenNITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNITypes.h; sourceTree = "<group>"; };
-		9F371B98173C45A8006FBD73 /* ofxOpenNITypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOpenNITypes.cpp; sourceTree = "<group>"; };
-		9F371B99173C45A8006FBD73 /* ofxOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNI.h; sourceTree = "<group>"; };
-		9F371B9A173C45A8006FBD73 /* ofxOpenNI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOpenNI.cpp; sourceTree = "<group>"; };
+		9F4DA3CF173C3EC600D85E31 /* ofxOpenNIUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNIUtils.h; sourceTree = "<group>"; };
+		9F4DA3D0173C3EC600D85E31 /* ofxOpenNITypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNITypes.h; sourceTree = "<group>"; };
+		9F4DA3D1173C3EC600D85E31 /* ofxOpenNITypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOpenNITypes.cpp; sourceTree = "<group>"; };
+		9F4DA3D2173C3EC600D85E31 /* ofxOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNI.h; sourceTree = "<group>"; };
+		9F4DA3D3173C3EC600D85E31 /* ofxOpenNI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOpenNI.cpp; sourceTree = "<group>"; };
+		9FC887291743B4ED00292047 /* alexkinect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = alexkinect.cpp; path = ../alexkinect.cpp; sourceTree = "<group>"; };
+		9FC8872B1743B52700292047 /* alexkinect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = alexkinect.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../../../libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E45BE9710E8CC7DD009D7055 /* AGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AGL.framework; path = /System/Library/Frameworks/AGL.framework; sourceTree = "<absolute>"; };
@@ -536,21 +540,6 @@
 			path = boidsclasses;
 			sourceTree = "<group>";
 		};
-		9F371B90173C4579006FBD73 /* src-UserAndCloud-Medium */ = {
-			isa = PBXGroup;
-			children = (
-				9F371B96173C45A8006FBD73 /* ofxOpenNIUtils.h */,
-				9F371B97173C45A8006FBD73 /* ofxOpenNITypes.h */,
-				9F371B98173C45A8006FBD73 /* ofxOpenNITypes.cpp */,
-				9F371B99173C45A8006FBD73 /* ofxOpenNI.h */,
-				9F371B9A173C45A8006FBD73 /* ofxOpenNI.cpp */,
-				9F371B91173C4579006FBD73 /* main.cpp */,
-				9F371B92173C4579006FBD73 /* testApp.cpp */,
-				9F371B93173C4579006FBD73 /* testApp.h */,
-			);
-			path = "src-UserAndCloud-Medium";
-			sourceTree = "<group>";
-		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,14 +596,32 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				9F371B90173C4579006FBD73 /* src-UserAndCloud-Medium */,
 				9F174BB51732C37800940238 /* boidsclasses */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E4EEC9E9138DF44700A80321 /* openFrameworks */,
 				BB4B014C10F69532006C3DED /* addons */,
 				E45BE5980E8CC70C009D7055 /* frameworks */,
 				E4B69B5B0A3A1756003C02F2 /* openNISample007Debug.app */,
 			);
 			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				9FC887291743B4ED00292047 /* alexkinect.cpp */,
+				9FC8872B1743B52700292047 /* alexkinect.h */,
+				9F4DA3CF173C3EC600D85E31 /* ofxOpenNIUtils.h */,
+				9F4DA3D0173C3EC600D85E31 /* ofxOpenNITypes.h */,
+				9F4DA3D1173C3EC600D85E31 /* ofxOpenNITypes.cpp */,
+				9F4DA3D2173C3EC600D85E31 /* ofxOpenNI.h */,
+				9F4DA3D3173C3EC600D85E31 /* ofxOpenNI.cpp */,
+				9F174BB81732C37800940238 /* ofxBoids.h */,
+				7704EC2514C7066A001AF021 /* main.cpp */,
+				7704EC2114C70657001AF021 /* testApp.cpp */,
+				7704EC2214C70657001AF021 /* testApp.h */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
 		};
 		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
 			isa = PBXGroup;
@@ -711,13 +718,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7704EC2414C70657001AF021 /* testApp.cpp in Sources */,
+				7704EC2614C7066A001AF021 /* main.cpp in Sources */,
 				9F174BBD1732C37800940238 /* BiologicalVehicle.cpp in Sources */,
 				9F174BBE1732C37800940238 /* SteeredVehicle.cpp in Sources */,
 				9F174BBF1732C37800940238 /* Vehicle.cpp in Sources */,
-				9F371B94173C4579006FBD73 /* main.cpp in Sources */,
-				9F371B95173C4579006FBD73 /* testApp.cpp in Sources */,
-				9F371B9B173C45A8006FBD73 /* ofxOpenNITypes.cpp in Sources */,
-				9F371B9C173C45A8006FBD73 /* ofxOpenNI.cpp in Sources */,
+				9F4DA3D4173C3EC600D85E31 /* ofxOpenNITypes.cpp in Sources */,
+				9F4DA3D5173C3EC600D85E31 /* ofxOpenNI.cpp in Sources */,
+				9FC8872A1743B4ED00292047 /* alexkinect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
