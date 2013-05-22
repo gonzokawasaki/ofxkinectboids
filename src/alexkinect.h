@@ -5,7 +5,7 @@
 //  Created by gonzo on 15/05/2013.
 //
 //
-/*
+
 #ifndef look_at_depth_alexkinect_h
 #define look_at_depth_alexkinect_h
 
@@ -13,7 +13,11 @@
 #include <XnCppWrapper.h>
 #include <ofxOpenNI.h>
 
-class OpenNiNode private {
+class OpenNiNode {
+public:
+    bool initialise ();
+    
+    void frameStart();
     
 private:
 	
@@ -27,4 +31,4 @@ private:
 
 
 #endif
-*/
+

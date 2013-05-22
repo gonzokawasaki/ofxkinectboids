@@ -270,7 +270,7 @@ public:
 	void setSync(bool b);
     bool getSync();
 
-	ofPixels& getDepthPixels();
+	ofPixels& getDepthPixels(); 
 	ofShortPixels& getDepthRawPixels();
 	ofPixels& getImagePixels();
 

@@ -33,6 +33,7 @@ public:
     ofEasyCam cam;
     
     int boidNum;
+    int depthiterate;
     ofVec3f target;
     vector<SteeredVehicle> boids;
     

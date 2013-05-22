@@ -11,6 +11,7 @@ void testApp::setup() {
     openNIDevice.setLogLevel(OF_LOG_VERBOSE);
     openNIDevice.addDepthGenerator();
     openNIDevice.addImageGenerator();   // comment this out
+    openNIDevice.setUseDepthRawPixels(true);
     openNIDevice.start();
     //openNIDevice.addInfraGenerator(); // and uncomment this to see infrared generator
                                         // or press the 'i' key when running
@@ -23,7 +24,7 @@ void testApp::setup() {
     
     //ofBackground(0, 0, 0, 1);
     ofSetFrameRate(30);
-    ofSetVerticalSync(false);
+    ofSetVerticalSync(true);
     ofEnableSmoothing();
     ofEnableAlphaBlending();
     //ofEnableNormalizedTexCoords();
@@ -40,11 +41,11 @@ void testApp::setup() {
     {
         SteeredVehicle v(ofRandom(100)-50, ofRandom(100)-50, ofRandom(100)-50);
         v.maxForce = 0.5f;
-        v.inSightDist = 60.0f;
+        //v.inSightDist = 1000.0f;
         boids.push_back(v);
     }
     
-    cam.setDistance(500);
+    cam.setDistance(300);
     
     GLfloat color[] = { 1.0, 0.2, 0.2 };
     
@@ -58,16 +59,69 @@ void testApp::setup() {
 void testApp::update(){
     openNIDevice.update();
     // pull kinect data do something
+
+    depthiterate = 4;
+    //pixelcount
     
+    std::vector<ofPoint>    NearPoints;
     
+    NearPoints.resize( boidNum );
+
+    float       NearDistance[ boidNum ];
     
+    for (int i = 0; i < boidNum; i++)
+    {
+        NearDistance[ i ] = 1000000.0f;
+    }
+    
+    unsigned short   *PTR = &openNIDevice.getDepthRawPixels()[ 0 ];
+
+    for( int y = 0 ; y < 480 ; y += depthiterate )
+    {
+        for( int x = 0 ; x < 640 ; x += depthiterate )
+        {
+            unsigned short  Depth = PTR[ ( y * 640 ) + x ];
+            
+            if( Depth > 0 && Depth < 3000 )
+            {
+                ofPoint     ProjectivePoint( x, y, Depth );
+                
+                ofPoint     WorldPoint = openNIDevice.projectiveToWorld( ProjectivePoint );
+                
+                for (int i = 0; i < boidNum; i++)
+                {
+                    float   DistanceToBoid = boids[ i ].position.distance( WorldPoint );
+                    
+                    if( DistanceToBoid < NearDistance[ i ] )
+                    {
+                        NearPoints[ i ] = WorldPoint;
+                        NearDistance[ i ] = DistanceToBoid;
+                    }
+                }
+            }
+        }
+    }
+    
+    if( NearDistance[ 0 ] < 1000000.0f )
+    {
+        for (int i = 0; i < boidNum; i++)
+        {
+            if( NearDistance[ i ] < 1000.0f )
+            {
+                boids[ i ].flee( NearPoints[ i ] );
+            }
+        }
+    }
+
     
     //boids below
     for (int i = 0; i < boidNum; i++)
     {
+        
+        //if 
         boids[i].flock(boids);
         boids[i].update();
-        boids[i].wrap(300, 300, 300);
+        boids[i].bounce(300, 300, 300);
     }
     
     
@@ -93,6 +147,33 @@ void testApp::draw(){
         glCallList(1);
         glPopMatrix();
     }
+    
+    unsigned short   *PTR = &openNIDevice.getDepthRawPixels()[ 0 ];
+    
+    const int   depthiterate = 5;
+    
+    glColor4f( 0.0f, 0.0f, 1.0f, 1.0f );
+    
+    glBegin( GL_POINTS );
+
+    for( int y = 0 ; y < 480 ; y += depthiterate )
+    {
+        for( int x = 0 ; x < 640 ; x += depthiterate )
+        {
+            unsigned short  Depth = PTR[ ( y * 640 ) + x ];
+            
+            if( Depth > 0 && Depth < 3000 )
+            {
+                ofPoint     ProjectivePoint( x, y, Depth );
+                
+                ofPoint     WorldPoint = openNIDevice.projectiveToWorld( ProjectivePoint );
+                
+                glVertex3f( WorldPoint.x, WorldPoint.y, WorldPoint.z );
+            }
+        }
+    }
+    
+    glEnd();
     
     cam.end();
 

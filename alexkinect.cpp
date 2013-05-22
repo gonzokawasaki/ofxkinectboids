@@ -1,8 +1,8 @@
-/*
+
 #include <XnOS.h>
 #include <XnCppWrapper.h>
 #include <ofxOpenNI.h>
-
+#include <alexkinect.h>
 
 bool OpenNiNode::initialise()
 {
@@ -38,7 +38,7 @@ bool OpenNiNode::initialise()
 	return( true );
 }
 
-void OpenNiNode::frameStart( qint64 pTimeStamp )
+void OpenNiNode::frameStart()
 {
 	// This routine gets called every frame so I use WaitNoneUpdateAll()
 	// You might instead want to use WaitOneUpdateAll()
@@ -57,4 +57,3 @@ void OpenNiNode::frameStart( qint64 pTimeStamp )
 
 	// the raw 16-bit depth values can now be accessed at mMetaDataDepth.Data()
 }
-*/
