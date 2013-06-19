@@ -62,9 +62,9 @@ public:
 		maxForce = 1.0f;
 		wanderAngle1 = ofRandom(0.0f, 360.0f);
 		wanderAngle2 = ofRandom(0.0f, 360.0f);
-		wanderDistance = 10.0f;
-		wanderRadius = 5.0f;
-		wanderRange = 10.0f;
+		wanderDistance = 5.0f; //10.0
+		wanderRadius = 2.0f;//5.0
+		wanderRange = 5.0f;//10.0
 		pathIndex = 0;
 		pathThreshold = 20.0f;
 		pathLoop = false;

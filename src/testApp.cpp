@@ -102,26 +102,36 @@ void testApp::update(){
         }
     }
     
-    if( NearDistance[ 0 ] < 1000000.0f )
+    if( NearDistance[ 0 ] < 1000000.0f )       // changed 1000000.0f this is just to check input
     {
+        
+        Float32 nearest = 10000.0;
+
         for (int i = 0; i < boidNum; i++)
         {
-            if( NearDistance[ i ] < 1000.0f )
+            if( NearDistance[ i ] < 2000.0f )
             {
-                boids[ i ].flee( NearPoints[ i ] );
+                //boids[ i ].flee( NearPoints[ i ] );
+                if (nearest > NearDistance[i])
+                {nearest = NearDistance[i];}
+                boids[ i ].flee( kinectIput);
+                //attempt to change near points to the point with lowest z index 18062013
             }
         }
     }
 
-    
+
     //boids below
     for (int i = 0; i < boidNum; i++)
     {
         
         //if 
         boids[i].flock(boids);
+        boids[i].seek(target);
+        boids[i].wander();
         boids[i].update();
-        boids[i].bounce(300, 300, 300);
+        // add a seek center point 
+        boids[i].wrap(600, 600, 600);
     }
     
     

@@ -35,6 +35,7 @@ public:
     int boidNum;
     int depthiterate;
     ofVec3f target;
+    ofVec3f kinectIput; //my var for the boids evading input
     vector<SteeredVehicle> boids;
     
 };
