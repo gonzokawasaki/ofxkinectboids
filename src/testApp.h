@@ -7,6 +7,7 @@
 #include "ofxBoids.h"
 #include "ofxOpenNI.h"
 #include "ofMain.h"
+#include "ofx3DModelLoader.h"
 
 class testApp : public ofBaseApp{
 
@@ -35,8 +36,14 @@ public:
     int boidNum;
     int depthiterate;
     ofVec3f target;
-    ofVec3f kinectIput; //my var for the boids evading input
+    ofVec3f fleefrom; //my var for the boids evading input
+    bool runaway;
     vector<SteeredVehicle> boids;
+    vector<ofVec3f>    oldVectors;
+    vector<ofVec3f>    tailVectors;
+    
+    ofx3DModelLoader fishheadmodel;
+
     
 };
 

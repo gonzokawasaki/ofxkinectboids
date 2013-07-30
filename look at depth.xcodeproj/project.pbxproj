@@ -28,6 +28,9 @@
 		9F174BBF1732C37800940238 /* Vehicle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F174BBB1732C37800940238 /* Vehicle.cpp */; };
 		9F4DA3D4173C3EC600D85E31 /* ofxOpenNITypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DA3D1173C3EC600D85E31 /* ofxOpenNITypes.cpp */; };
 		9F4DA3D5173C3EC600D85E31 /* ofxOpenNI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F4DA3D3173C3EC600D85E31 /* ofxOpenNI.cpp */; };
+		9F5C00CC1788C143005A6714 /* model3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C00C41788C143005A6714 /* model3DS.cpp */; };
+		9F5C00CD1788C143005A6714 /* texture3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C00C61788C143005A6714 /* texture3DS.cpp */; };
+		9F5C00CE1788C143005A6714 /* ofx3dModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F5C00CA1788C143005A6714 /* ofx3dModelLoader.cpp */; };
 		9FC8872A1743B4ED00292047 /* alexkinect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9FC887291743B4ED00292047 /* alexkinect.cpp */; };
 		BBAB23CB13894F3D00AA2426 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBAB23BE13894E4700AA2426 /* GLUT.framework */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
@@ -235,6 +238,14 @@
 		9F4DA3D1173C3EC600D85E31 /* ofxOpenNITypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOpenNITypes.cpp; sourceTree = "<group>"; };
 		9F4DA3D2173C3EC600D85E31 /* ofxOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxOpenNI.h; sourceTree = "<group>"; };
 		9F4DA3D3173C3EC600D85E31 /* ofxOpenNI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxOpenNI.cpp; sourceTree = "<group>"; };
+		9F5C00C41788C143005A6714 /* model3DS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model3DS.cpp; sourceTree = "<group>"; };
+		9F5C00C51788C143005A6714 /* model3DS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model3DS.h; sourceTree = "<group>"; };
+		9F5C00C61788C143005A6714 /* texture3DS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture3DS.cpp; sourceTree = "<group>"; };
+		9F5C00C71788C143005A6714 /* texture3DS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture3DS.h; sourceTree = "<group>"; };
+		9F5C00C81788C143005A6714 /* Vector3DS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3DS.h; sourceTree = "<group>"; };
+		9F5C00C91788C143005A6714 /* ofx3DBaseLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DBaseLoader.h; sourceTree = "<group>"; };
+		9F5C00CA1788C143005A6714 /* ofx3dModelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofx3dModelLoader.cpp; sourceTree = "<group>"; };
+		9F5C00CB1788C143005A6714 /* ofx3DModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DModelLoader.h; sourceTree = "<group>"; };
 		9FC887291743B4ED00292047 /* alexkinect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = alexkinect.cpp; path = ../alexkinect.cpp; sourceTree = "<group>"; };
 		9FC8872B1743B52700292047 /* alexkinect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = alexkinect.h; sourceTree = "<group>"; };
 		BBAB23BE13894E4700AA2426 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
@@ -540,9 +551,25 @@
 			path = boidsclasses;
 			sourceTree = "<group>";
 		};
+		9F5C00C31788C143005A6714 /* 3DS */ = {
+			isa = PBXGroup;
+			children = (
+				9F5C00C41788C143005A6714 /* model3DS.cpp */,
+				9F5C00C51788C143005A6714 /* model3DS.h */,
+				9F5C00C61788C143005A6714 /* texture3DS.cpp */,
+				9F5C00C71788C143005A6714 /* texture3DS.h */,
+				9F5C00C81788C143005A6714 /* Vector3DS.h */,
+			);
+			path = 3DS;
+			sourceTree = "<group>";
+		};
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				9F5C00C31788C143005A6714 /* 3DS */,
+				9F5C00C91788C143005A6714 /* ofx3DBaseLoader.h */,
+				9F5C00CA1788C143005A6714 /* ofx3dModelLoader.cpp */,
+				9F5C00CB1788C143005A6714 /* ofx3DModelLoader.h */,
 				770F031514B9969E003CCE99 /* lib */,
 				770F033314B996AE003CCE99 /* include */,
 			);
@@ -726,6 +753,9 @@
 				9F4DA3D4173C3EC600D85E31 /* ofxOpenNITypes.cpp in Sources */,
 				9F4DA3D5173C3EC600D85E31 /* ofxOpenNI.cpp in Sources */,
 				9FC8872A1743B4ED00292047 /* alexkinect.cpp in Sources */,
+				9F5C00CC1788C143005A6714 /* model3DS.cpp in Sources */,
+				9F5C00CD1788C143005A6714 /* texture3DS.cpp in Sources */,
+				9F5C00CE1788C143005A6714 /* ofx3dModelLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -764,6 +794,7 @@
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
+				SDKROOT = macosx10.8;
 			};
 			name = Debug;
 		};
@@ -793,6 +824,7 @@
 					"-D__MACOSX_CORE__",
 					"-lpthread",
 				);
+				SDKROOT = macosx10.8;
 			};
 			name = Release;
 		};
@@ -899,7 +931,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9 = "\"$(SRCROOT)/bin/data/openni/lib\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1006,7 +1038,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_9 = "\"$(SRCROOT)/bin/data/openni/lib\"";
 				PREBINDING = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.7;
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

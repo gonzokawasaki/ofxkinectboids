@@ -68,7 +68,7 @@ public:
 		pathIndex = 0;
 		pathThreshold = 20.0f;
 		pathLoop = false;
-		inSightDist = 120.0f;
+		inSightDist = 120.0f;//120.0
 		tooCloseDist = 20.0f;
 	}
 	
